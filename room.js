@@ -21,7 +21,7 @@ firebase.database().ref("/").child(room_name).update({
     purpose: "adding room"
 });
 localStorage.setItem("adding_room", room_name);
-window.location = "Kwitter_page.html";
+window.location = "Page.html";
 }
 
 function getData() { firebase.database().ref("/").on('value', function(snapshot) { document.getElementById("output").innerHTML = ""; snapshot.forEach(function(childSnapshot) { childKey = childSnapshot.key; 
@@ -35,7 +35,7 @@ getData();
 function redirectToRoomName(name){
     console.log(name);
     localStorage.setItem("room_name", name);
-    window.location + "Kwitter_page.html";
+    window.location + "Page.html";
 }
 
 function logout() {
